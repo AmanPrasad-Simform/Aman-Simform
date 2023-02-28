@@ -8,41 +8,164 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
     <title>Bootstrap Website</title>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+<!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#"><span class="text-danger">Coder</span>Brothers</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav md-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-white active " aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" >Services</a>
+              <a class="nav-link text-white" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+              <a class="nav-link text-white" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
+              <a class="nav-link text-white" href="#contact">Contact</a>
             </li>
-          </ul>
+            </ul>
         </div>
       </div>
     </nav>
+
+<!--Carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/pexels-designecologist-1779487.jpg" class=" d-block w-100" alt="...">
+          <div class=" carousel-caption fw-normal font-monospace">
+            <h3>Welcome to Coding World</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta accusamus unde dolore eaque illo nulla eligendi quam, repudiandae provident at inventore excepturi velit neque libero sed reprehenderit similique modi, iste praesentium obcaecati? Corrupti iure laborum, asperiores ad deserunt deleniti reiciendis?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pexels-hasan-albari-1229861.jpg" class="d-block w-100" alt="...">
+          <div class=" carousel-caption fw-normal font-monospace">
+            <h3>We provide satisfactory services</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta accusamus unde dolore eaque illo nulla eligendi quam, repudiandae provident at inventore excepturi velit neque libero sed reprehenderit similique modi, iste praesentium obcaecati? Corrupti iure laborum, asperiores ad deserunt deleniti reiciendis?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pexels-bich-tran-669996.jpg" class="d-block w-100" alt="...">
+          <div class=" carousel-caption fw-normal font-monospace">
+            <h3>Code Optimization</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta accusamus unde dolore eaque illo nulla eligendi quam, repudiandae provident at inventore excepturi velit neque libero sed reprehenderit similique modi, iste praesentium obcaecati? Corrupti iure laborum, asperiores ad deserunt deleniti reiciendis?</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<!--Service Section-->
+<section id="services" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center pb-5">
+          <h2>Our Services</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ipsum rerum doloribus nesciunt, earum et provident dolor tempore architecto quae repellat tempora eaque non at blanditiis voluptas quas possimus quaerat  </p>
+        </div>
+      </div>
+    </div>
+    <div class="row font-monospace">
+      <div class="col-12 col-md-12 col-lg-4">
+        <div class="card text-white text-center bg-dark pb-2">
+          <div class="card-body">
+            <i class="bi bi-emoji-laughing"></i>
+            <h3 class="card-title">Best Quality</h3>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+            <button class="btn btn-warning text-dark">Read More</button>
+          </div>
+        </div>
+      </div>
+    
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="card text-white text-center bg-dark pb-2">
+        <div class="card-body">
+          <i class="bi bi-slack"></i>
+          <h3 class="card-title">Best Quality</h3>
+          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+          <button class="btn btn-warning text-dark">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="card text-white text-center bg-dark pb-2">
+        <div class="card-body">
+          <i class="bi bi-wrench"></i>
+          <h3 class="card-title">Best Quality</h3>
+          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+          <button class="btn btn-warning text-dark">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="services" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center pb-5">
+          <h2>Our Services</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ipsum rerum doloribus nesciunt, earum et provident dolor tempore architecto quae repellat tempora eaque non at blanditiis voluptas quas possimus quaerat  </p>
+        </div>
+      </div>
+    </div>
+    <div class="row font-monospace">
+      <div class="col-12 col-md-12 col-lg-4">
+        <div class="card text-white text-center bg-dark pb-2">
+          <div class="card-body">
+            <i class="bi bi-emoji-laughing"></i>
+            <h3 class="card-title">Best Quality</h3>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+            <button class="btn btn-warning text-dark">Read More</button>
+          </div>
+        </div>
+      </div>
+    
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="card text-white text-center bg-dark pb-2">
+        <div class="card-body">
+          <i class="bi bi-slack"></i>
+          <h3 class="card-title">Best Quality</h3>
+          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+          <button class="btn btn-warning text-dark">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="card text-white text-center bg-dark pb-2">
+        <div class="card-body">
+          <i class="bi bi-wrench"></i>
+          <h3 class="card-title">Best Quality</h3>
+          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis neque ratione natus nulla officia, saepe at voluptatum, dolores veritatis eveniet repellat incidunt porro maxime velit, est magnam enim exercitationem praesentium fugit officiis. Assumenda sunt nobis aliquid quos a fuga.</p>
+          <button class="btn btn-warning text-dark">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

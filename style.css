@@ -38,7 +38,7 @@ h3{
 
 
 
-@media screen (max-width:375px){
+@media screen and (max-width:1476px){
     .navbar-nav{
         text-align: center;
     }
@@ -61,7 +61,7 @@ h3{
         height: 100vh;
 
     }
-    .carousel-inner{
+    .carousel-inner img{
         height: 100vh;
     }
     #services>div.row{

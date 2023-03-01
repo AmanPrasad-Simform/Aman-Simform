@@ -1,6 +1,70 @@
 h3{
     margin-bottom: 100px;
 }
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h3{
+    font-size: 45px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+}
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
 .service .card-body i{
     font-size: 50px;
+}
+
+
+
+
+
+
+@media screen (max-width:375px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width:100%;
+        line-height: 1.6;
+        font-size: 12px;
+        overflow: hidden;
+    }
+    .carousel-item{
+        height: 100vh;
+
+    }
+    .carousel-inner{
+        height: 100vh;
+    }
+    #services>div.row{
+        gy:10;
+    }
 }

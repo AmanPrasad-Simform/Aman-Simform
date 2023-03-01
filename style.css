@@ -177,7 +177,7 @@ body{
     margin: 0 -4px;
 }
 
-.section-container__features:hover{
+.section-container__features{
     display: flex;
     justify-content: center;
     gap: 65px;

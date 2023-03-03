@@ -1,42 +1,31 @@
-
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
+
 }
 body{
-    background: #f1f3f6;
+    background-color: #f1f3f6;
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-}
-.flip_search{
-    display: flex;
-    justify-content:center;
-}
+/* NAVBAR :: */ 
 
-/* NAVBAR:  */
-
-#navbar{
-    display: flex;
-    background-color: #2874f0;
-    justify-content: center;
-    height: 56px;
+.navbar{
     width: 100%;
+    background-color:  #2874f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
+/* Navbar Logo */
 .navbar_logo{
-    padding-left: 10px;
-    padding-bottom: 10px;
-
+    margin: 10px;
+    /* min-width: ;  */
 }
-
-/* EXPLORE_PLUS: */
-
 .flipkart_logo{
     margin-top:13px;
 
@@ -62,125 +51,93 @@ body{
     margin: 0px -2px;
 }
 
-/* SEARCH_BOX: */
-
-.search_box{
-    width: 580px;
-    margin-top: 0px;
-    position: relative;
-}
+/* Navbar search  */
 .search{
-    width: 530px;
-    margin: 8px -5px 8px 8px;
-    height: 36px;
-    font-size: 14px;
-    outline: none;
-    padding: 0 16px 0 16px;
+    display: flex;
+    width: fit-content;
+    background-color: #ffffff;
+    height: max-content;
+    align-items: center;
+    margin: auto;
+    margin-right: 30px;
 }
-.search_button{
-    position: absolute;
-    top: 9px;
-    right: 0;
-    border: 1px solid #fff;
-    background-color: #fff;
-    height: 34px;
-    width: 44px;
-    border-radius: 2px;
-    cursor: pointer;
-    padding: 0px 35px 6px 8px;
-    margin-left: -1px;
+.search_bar{
+    width: 25vw;
+    min-width: 200px;
+    height: 35px;
+    border: 0;
+    outline: none;
+    border: 5px #ffffff;
+    font-size: 14px;
+    padding: 0 0 0 10px;
 }
 .search_icon{
-    position: absolute;
-    top: 9px;
+cursor: pointer;
+margin: 10px;
 }
 
-/* LINKS: */
-
-.nav{
-    margin:0px 0 0 70px;
-    width: 30%;
-}
-
-
-.items_login{
+.nav-links{
     display: flex;
-    background-color: white;
-    color: #2874f0;
-    cursor: pointer;
-    border-radius: 2px;
-    height: 30px;
-    margin: -5px 0 0 0 ;
-    padding: 0px 40px 0 40px;
-    border: 1px solid #dbdbdb;
-    font-weight: 600;
-    align-self: center;
-}
-.items_login_button{
-    display: flex;
-    margin: 10px;
+    gap:20px;
+    margin-left: 30px;
+    width: 25vw;
+    justify-content: space-around;
     align-items: center;
+}
+
+.login{
     color: #2874f0;
-    font-weight: 550;
+    background-color:#ffffff ;
+    /* min-width: 80px; */
+
+}
+.login_item{
+    color: #2874f0;
+    font-weight: 600;
     background-color: #fff;
     cursor: pointer;
     border-radius: 2px;
-    height: 32px;
     padding: 5px 40px;
+    border: 1px solid #dbdbdb;
 }
-.link_item{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    margin: 0 75px;
-}
+.more,.cart{
+    cursor: pointer;
+    min-width: 50px;
 
-.items{
-    color: white;
-    font-weight: 600;
 }
-
-.more_cart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.more_name{
     color: #ffffff;
-    font-weight: 550;
-    font-size:16px;
-}
-
-.more{
-    display: flex;
-    width: 48px;
-    margin: 0 35px;
-    justify-content: space-between;
-    align-items: center;
 }
 .more_icon{
-    margin: 0 -4px;
-    transform: rotate(270deg);
+    transform: rotate(-90deg);
 }
 .more:hover .more_icon{
-    transition: transform 0.25s ease-in-out;
-    transform: rotate(180deg);
+    transition: transform 0.30s ease-in-out;
+    transform: rotate(90deg);
 }
-
-.cart{
+.cart_name{
+    color: #ffffff;
+}
+.nav_wrapper{
     display: flex;
-    width: 50px;
-    margin: 0 35px;
-    justify-content: space-between;
-    align-items: center;
+}
+@media screen and (max-width:700px){
+.navbar{
+flex-direction: column;
+padding-bottom:10px ;
+gap:10px;
+}
+}
 
-}
-.cart_icon{
-    margin: 0 -4px;
-}
+/*SECTION ::*/
 
 .section-container__features{
     display: flex;
+    flex-wrap: wrap;
+    max-height: 280px;
+    overflow-y: scroll;
     justify-content: center;
-    gap: 65px;
+    gap: 50px;
     max-width: 2080px;
     padding: 12px 8px;
     text-align: center;
@@ -208,6 +165,18 @@ body{
 .feature-img:hover img {
     transform: scale(1.1);
   }
+
+.rotater{
+    margin: 1px;
+    transform: rotate(-90deg);
+    fill:black;
+}
+.feature-img:hover .rotater{
+    transition: transform 0.30s ease-in-out;
+    transform: rotate(90deg);
+    fill: #2874f0;
+}
+
   .feature-img p {
     font-size: 14px;
     font-weight: 600;
@@ -222,28 +191,45 @@ body{
     fill: #2874f0;
     transform: rotate(90deg);
   }
-/* main body */
-.main-section{
+
+
+/* Main body:: */
+.demo{
     display: flex;
     justify-content: center;
+    width: calc(210px + 100%);
+}
+
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 20px 84px;
+}
+.main-section-music{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: #ffffff;
 }
 .main-section-deals{
     display: flex;
-    width: 90%;
-    padding: 10px 0;
+    width: 85%;
+    padding: 20px 0;
 }
 .main-section-deals-left{
-    width: 85%;
+    width: 84%;
     background-color: #ffffff;
-    margin:0 15px 0 0;
-}
-.main-section-deals-right{
-    width: 15%;
-    background-color: #ffffff;
+    margin:0 4px 0 0;
 
 }
+.main-section-deals-right{
+    width: 16%;
+    min-width:210px;
+    background-color: #ffffff;
+}
+
 .top-heading{
     display: flex;
     justify-content: space-between;
@@ -255,8 +241,6 @@ body{
 .top-heading-content{
     display: flex;
     align-items: center;
-    /* margin: 10px 0;
-    padding: 0 10px; */
 }
 .top-heading-content h2{
     font-size: 30px;
@@ -270,10 +254,7 @@ body{
     padding: 0 8px;
     font-weight: 600;
 }
-.top-heading-button{
-    /* margin: 10px 0;
-    padding: 0 10px; */
-}
+
 .top-heading-button button{
     background: #2874f0;
     color: #fff;
@@ -290,22 +271,30 @@ body{
 }
 .deals-items{
     position: relative;
+    overflow-x: scroll;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    max-width: 1680px;
-    width: 100%;
+    width: 1700px;
     overflow: inherit;
     overflow-y: hidden;
     padding-bottom: 30px;
+    overflow-x: auto;
+
 }
 .deals-items-content{
+    justify-content:center ;
     text-align: center;
     padding: 0 20px;
+    width: 210px;
+}
+.deals-scroll{
+    overflow: auto;
 }
 .deals-items-image{
     width: 175px;
     height: 180px;
+    object-fit: contain;
 }
 .deals-items-image img{
     width: 90%;
@@ -337,6 +326,90 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.main-section-deals-right img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 
+}
 
+/* bottom */
+.bottom{
+    width: 85%;
+}
 
+@media screen and (max-width: 1152px) {
+    .main-section-deals-left {
+        width: 75%;
+    }
+    .bottom{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .main-section{
+        padding: 20px 0px;
+}
+    .main-section-deals{
+        width: 100%;
+    }
+    .main-section-deals-right{
+        display: none;
+    }
+    .main-section-deals-left{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    
+    .nav-links{
+        width: auto;
+    }
+    .main-section-deals-right {
+        min-width:200px;
+    }
+    
+}
+@media screen and (max-width: 900px) {
+    
+    .main-section-deals-right {
+        min-width:165px;
+    }
+    
+}
+
+@media screen and (max-width: 504px) {
+    
+    .top-heading-content h2 {
+        font-size: 20px;
+    }
+    .top-heading-content p {
+        font-size: 15px;
+    }
+    .top-heading-button button {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .search_bar {
+        width: 20vw;
+     min-width: 150px;
+    }
+    .nav-links {
+         margin-left: 0px;
+    }
+    .top-heading-content h2 {
+        font-size: 14px;
+    }
+    .top-heading-content p {
+        font-size: 11px;
+    }
+    .top-heading-button button {
+        padding: 5px 18px;
+        font-size: 12px;
+    }
+}

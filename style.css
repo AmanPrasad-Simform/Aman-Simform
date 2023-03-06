@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body{
@@ -11,7 +10,11 @@ body{
 }
 
 /* NAVBAR :: */ 
-
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
 .navbar{
     width: 100%;
     background-color:  #2874f0;
@@ -19,6 +22,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: sticky;
 }
 
 /* Navbar Logo */
@@ -78,7 +82,6 @@ body{
 .nav-links{
     display: flex;
     gap:20px;
-    margin-left: 30px;
     width: 25vw;
     justify-content: space-around;
     align-items: center;
@@ -231,21 +234,24 @@ body{
     display: flex;
     width: 88%;
     padding: 20px 0;
+
 }
 .main-section-deals-left{
     width: 88%;
     background-color: #ffffff;
     margin:0 4px 0 0;
+    box-shadow: 0 0 7px -4px black;
+    overflow-x: hidden;
 
 }
 
 .main-section-deals-right{
-    min-width:240px;
+    min-width:260px;
     background-color: #ffffff;
 }
 .main-section-deals-right > img{
     width: 260px;
-    height: auto;
+    min-height: 100%;
 }
 .top-heading{
     display: flex;
@@ -307,6 +313,7 @@ body{
 }
 .deals-scroll{
     overflow: auto;
+
 }
 .deals-items-image{
     width: 175px;

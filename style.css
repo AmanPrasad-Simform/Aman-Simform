@@ -3,9 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
-
+    overflow-x: hidden;
 }
+
 body{
     background-color: #f1f3f6;
 }
@@ -24,11 +24,9 @@ body{
 /* Navbar Logo */
 .navbar_logo{
     margin: 10px;
-    /* min-width: ;  */
 }
 .flipkart_logo{
     margin-top:13px;
-
 }
 .flipkart_icon{
     height: 20px;
@@ -72,10 +70,11 @@ body{
     padding: 0 0 0 10px;
 }
 .search_icon{
-cursor: pointer;
-margin: 10px;
+    cursor: pointer;
+    margin: 10px;
 }
 
+/* Navbar Links */
 .nav-links{
     display: flex;
     gap:20px;
@@ -88,8 +87,8 @@ margin: 10px;
 .login{
     color: #2874f0;
     background-color:#ffffff ;
-    /* min-width: 80px; */
-
+    height: 34px;
+    overflow-y: hidden;
 }
 .login_item{
     color: #2874f0;
@@ -121,12 +120,13 @@ margin: 10px;
 .nav_wrapper{
     display: flex;
 }
+
 @media screen and (max-width:700px){
-.navbar{
-flex-direction: column;
-padding-bottom:10px ;
-gap:10px;
-}
+    .navbar{
+        flex-direction: column;
+        padding-bottom:10px ;
+        gap:10px;
+    }
 }
 
 /*SECTION ::*/
@@ -135,7 +135,7 @@ gap:10px;
     display: flex;
     flex-wrap: wrap;
     max-height: 280px;
-    overflow-y: scroll;
+    overflow-y: auto;
     justify-content: center;
     gap: 50px;
     max-width: 2080px;
@@ -192,8 +192,22 @@ gap:10px;
     transform: rotate(90deg);
   }
 
+  /* Carousel:: */
+
+  .carousel_wrapper{
+      display: flex;
+      width: 88%;
+      padding: 20px 0;
+  }
+  .carousel-item{
+    position: relative;
+  }
+  .carousel-item img{
+    width: 100%;
+  }
 
 /* Main body:: */
+
 .demo{
     display: flex;
     justify-content: center;
@@ -203,33 +217,36 @@ gap:10px;
 .main-section{
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
     justify-content: center;
-    margin: 10px 0;
-    padding: 20px 84px;
+    margin-inline: auto;
 }
 .main-section-music{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    /* width: 90%; */
     background-color: #ffffff;
 }
 .main-section-deals{
     display: flex;
-    width: 85%;
+    width: 88%;
     padding: 20px 0;
 }
 .main-section-deals-left{
-    width: 84%;
+    width: 88%;
     background-color: #ffffff;
     margin:0 4px 0 0;
 
 }
+
 .main-section-deals-right{
-    width: 16%;
-    min-width:210px;
+    min-width:240px;
     background-color: #ffffff;
 }
-
+.main-section-deals-right > img{
+    width: 260px;
+    height: auto;
+}
 .top-heading{
     display: flex;
     justify-content: space-between;
@@ -295,6 +312,9 @@ gap:10px;
     width: 175px;
     height: 180px;
     object-fit: contain;
+}            
+.deals-items-content:hover img{
+    transform: scale(1.05);
 }
 .deals-items-image img{
     width: 90%;
@@ -326,17 +346,9 @@ gap:10px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.main-section-deals-right img{
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
 
-}
 
-/* bottom */
-.bottom{
-    width: 85%;
-}
+/* Media Queries:: */
 
 @media screen and (max-width: 1152px) {
     .main-section-deals-left {
@@ -347,10 +359,23 @@ gap:10px;
     }
 }
 
-@media screen and (max-width:700px){
-    .main-section{
-        padding: 20px 0px;
+@media screen and (max-width: 1070px) {
+    .nav-links{
+        width: auto;
+    }
+    .carousel_wrapper_wrap img{
+        min-height: 140px;
+    }
 }
+
+@media screen and (max-width:700px){
+    .carousel_wrapper{
+        display: none;
+    }
+    .main-section{
+        width: 100%;
+        padding: 20px 0px;
+    }
     .main-section-deals{
         width: 100%;
     }
@@ -362,26 +387,7 @@ gap:10px;
     }
 }
 
-@media screen and (max-width: 1070px) {
-    
-    .nav-links{
-        width: auto;
-    }
-    .main-section-deals-right {
-        min-width:200px;
-    }
-    
-}
-@media screen and (max-width: 900px) {
-    
-    .main-section-deals-right {
-        min-width:165px;
-    }
-    
-}
-
 @media screen and (max-width: 504px) {
-    
     .top-heading-content h2 {
         font-size: 20px;
     }
